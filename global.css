@@ -32,7 +32,7 @@ body {
   display: none
 }
 
-.menu__desktop {
+.menu-desktop {
   display: none;
 }
 
@@ -53,16 +53,16 @@ body {
     width: 60px
   }
 
-  .menu__desktop {
+  .menu-desktop {
     display: flex;
     gap: 3rem;
   }
 
-  .menu__desktop__link--ativo {
+  .menu-desktop__link--ativo {
     font-weight: 700;
   }
 
-  .menu__desktop__link:hover {
+  .menu-desktop__link:hover {
     color: yellow;
   }
 
@@ -92,32 +92,39 @@ body {
   transition: .25s
 }
 
+.menu-lateral__title {
+  padding: 4rem 0 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: inline-block;
+
+  margin: 0 2.5rem;
+
+  border-bottom: 1px solid gray;
+}
+
 .menu-lateral--ativo{
   left: 0;
   transition: .25s
 }
 
 .menu-lateral__link {
-  height: 64px;
+  height: 4rem;
   color:#95999C;
-  padding-left: 64px;
+  padding-left: 2.5rem;
   display: flex;
-  align-items: center
+  align-items: center;
+  gap: 1rem
+}
+
+.menu-lateral__link:hover {
+  color: yellow;
 }
 
 .menu-lateral__link--ativo {
   color: #FFFFFF;
-  padding-left: 2.5rem;
+  padding-left: 2rem;
   border-left: 0.5rem solid #FFFFFF
-}
-
-.menu-lateral__link::before {
-  content: "";
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1.5rem;
-  position: absolute;
-  left: 1.5rem
 }
 
 @media screen and (min-width: 1440px) {

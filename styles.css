@@ -45,17 +45,19 @@ main {
   border-radius: 10px;
 }
 
+.icons__section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
 .section__subtitle {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 0.5rem;
-}
-
-.icons__section {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .stack__logo {
@@ -63,12 +65,19 @@ main {
 }
 
 .social__logo {
-  width: 50px;
+  font-size: 50px;
+  color: gray;
+  margin-top: -1rem
 }
 
 @media screen and (min-width: 1440px) {
   main {
     max-width: 768px;
   }
-
+  
+  .stacks {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem
+  }
 }
