@@ -1,0 +1,43 @@
+.infos {
+  
+}
+
+.infos input {
+  display: block;
+  background-color: #1D232A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  padding: 0.5rem 1rem;
+
+  color: yellow;
+  text-align: center;
+
+  width: 70%;
+  margin: 1.5rem auto 0;
+}
+
+.infos input::placeholder {
+  color: yellow
+}
+
+.infos button {
+  margin: 2rem 0 0;
+  background-color: yellow;
+  color: #000;
+  padding: 0.5rem 1rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.resultado {
+  display: none;
+
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.resultado p {
+  font-size: 1.3rem
+}

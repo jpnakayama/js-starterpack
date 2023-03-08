@@ -132,3 +132,26 @@ body {
     display: none;
   }
 }
+
+/* Estilizalização das páginas com container */
+
+.container {
+  max-width: 80vw;
+  margin: 5rem auto;
+  padding: 2rem;
+
+  text-align: center;
+  background-color: #15191C;
+  border-radius: 10px
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 768px;
+  }
+}
