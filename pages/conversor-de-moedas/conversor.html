@@ -39,7 +39,7 @@
     <button class="cabecalho__home" aria-label="home"><i class="fa-solid fa-house"></i></button>
   </header>
 
-  <nav class="menu-lateral menu-lateral--ativo">
+  <!-- <nav class="menu-lateral menu-lateral--ativo">
     <h2 class="menu-lateral__title">Javascript Starter Pack</h2>
     <a href="../../index.html" class="menu-lateral__link"><i class="ph-light ph-house"></i>Home</a>
     <a href="../calculadoraIMC/calculadora.html" class="menu-lateral__link"><i class="ph-light ph-calculator"></i>Calculadora IMC</a>
@@ -47,17 +47,49 @@
     <a href="../geraCEP/geraCEP.html" class="menu-lateral__link"><i class="ph-light ph-envelope"></i>Gerador de CEP</a>
     <a href="../listaIMDb/lista.html" class="menu-lateral__link"><i class="ph-light ph-film-reel"></i>Lista IMDb</a>
     <a href="../tabela-copa/tabela.html" class="menu-lateral__link"><i class="ph-light ph-soccer-ball"></i>Tabela da Copa</a>
-  </nav>
+  </nav> -->
 
   <main>
     <section class="container">
       <h1 class="page-title">CONVERSOR DE MOEDAS</h1>
+
+      <form class="infos" id="formulario">
+        <div class="infos-moedas"> 
+          <select name="origem" id="origem">
+            <option value="#">De</option>
+            <option value="USD">Dólar</option>
+            <option value="EUR">Euro</option>
+            <option value="BRL">Real</option>
+            <option value="JPY">Iene</option>
+            <option value="CNY">Yuan</option>
+            <option value="BTC">Bitcoin</option>
+          </select>
+          <select name="saida" id="saida">
+            <option value="#">Para</option>
+            <option value="BRL">Real</option>
+            <option value="EUR">Euro</option>
+            <option value="USD">Dólar</option>
+            <option value="JPY">Iene</option>
+            <option value="CNY">Yuan</option>
+            <option value="BTC">Bitcoin</option>
+          </select>
+        </div>
+        <input type="number" id="valor-origem" placeholder="INSIRA O VALOR">
+        <button type="submit"><i class="ph-light ph-repeat"></i>Converte</button>
+      </form>
+
+      <div class="resultado" id="resultado-conversao">
+        <h2 id="valor-conversao"></p>
+        <h3 id="texto-conversao"></h3>
+      </div>
+
     </section>
  
 
   </main>
 
   <script src="../../scripts/menu.js"></script>
+  <script src="../../scripts/conversor.js"></script>
 
 </body>
 

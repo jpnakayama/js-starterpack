@@ -1,0 +1,71 @@
+.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin: 2rem auto 0;
+}
+
+.infos span {
+  font-size: 2rem
+}
+
+.infos-moedas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem
+}
+
+.infos-moedas select {
+  background-color: #1D232A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  padding: 0.5rem 1rem;
+}
+
+.infos input {
+  background-color: #1D232A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  padding: 0.5rem 1rem;
+
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.infos button {
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.infos button:hover {
+  background-color: yellow;
+  color: #000;
+  transition: all 0.2s
+}
+
+.resultado {
+  display: block;
+  margin: 1rem 0 0;
+}
+
+.resultado h2 {
+  color: yellow;
+  font-size: 2rem;
+  margin-bottom: 1rem
+}
+
+.resultado p {
+  font-size: 0.8rem;
+}
