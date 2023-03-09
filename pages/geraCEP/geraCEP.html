@@ -52,12 +52,25 @@
   <main>
     <section class="container">
       <h1 class="page-title">GERADOR DE CEP</h1>
+      <form class="infos" id="formulário">
+        <div>
+          <select type="text" id="estado">
+            <option value="#">UF</option>
+          </select>
+          <select type="text" placeholder="CIDADE" id="cidade">
+            <option value="#">CIDADE</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Nome da rua ou avenida" id="logradouro">
+      </form>
+
     </section>
  
 
   </main>
 
   <script src="../../scripts/menu.js"></script>
+  <script src="../../scripts/geraCEP.js"></script>
 
 </body>
 
