@@ -92,6 +92,11 @@ body {
   transition: .25s
 }
 
+.menu-lateral--ativo{
+  left: 0;
+  transition: .25s
+}
+
 .menu-lateral__title {
   padding: 4rem 0 2rem;
   font-size: 1.3rem;
@@ -101,11 +106,6 @@ body {
   margin: 0 2.5rem;
 
   border-bottom: 1px solid gray;
-}
-
-.menu-lateral--ativo{
-  left: 0;
-  transition: .25s
 }
 
 .menu-lateral__link {

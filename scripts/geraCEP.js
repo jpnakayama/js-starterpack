@@ -1,5 +1,10 @@
 const selectEstados = document.getElementById('estado')
-const seletctCidades = document.getElementById('cidade')
+const selectCidades = document.getElementById('cidade')
+const logradouroInput = document.getElementById('logradouro')
+const btnPesquisar = document.getElementById('btn-enviar')
+const btnAtualizar = document.getElementById('btn-refresh')
+const tabelaCEP = document.getElementById('tabela-cep')
+const listagemCEP = document.getElementById('listagem-cep')
 
 fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
   .then(response => response.json())
@@ -14,25 +19,51 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
       selectEstados.appendChild(optionEstado)     
     })
 
-async function obterCidade(estado) {
-  const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estado}/municipios`);
-  const cidades = await response.json();
-  return cidades;
-}
-    
-selectEstados.addEventListener('change', async(event) => {
-  let estadoSelecionado = event.target.value
-  console.log(estadoSelecionado)
+    async function obterCidade(estado) {
+      const response = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estado}/municipios`);
+      const cidades = await response.json();
+      
+      return cidades;
+    }
+        
+    selectEstados.addEventListener('change', async(evento) => {
+      let estadoSelecionado = evento.target.value
+      
+      const listaDeCidades = await obterCidade(estadoSelecionado)
+      
+      listaDeCidades.forEach(cidade => {
+        const optionCidade = document.createElement('option')
+        optionCidade.value = cidade.nome
+        optionCidade.text = cidade.nome
+        selectCidades.appendChild(optionCidade)
+      })      
+    })
 
-  const cidades = await obterCidade(estadoSelecionado)
+    btnPesquisar.addEventListener('click', async(evento) => {
+      evento.preventDefault()
+      
+      let estadoEscolhido = estado.value
+      let cidadeEscolhida = cidade.value
+      let logradouroEscolhido = logradouroInput.value
 
-  cidades.forEach(cidade => {
-    const optionCidade = document.createElement('option')
-    optionCidade.value = cidade.nome
-    optionCidade.text = cidade.nome
-    seletctCidades.appendChild(optionCidade)
+      await fetch(`https://viacep.com.br/ws/${estadoEscolhido}/${cidadeEscolhida}/${logradouroEscolhido}/json/`)
+      .then(response => response.json())  
+      .then(data => {
+          data.forEach(item => {
+            const linhaItem = document.createElement('tr')
+            const itemBairro = document.createElement('td')
+            itemBairro.innerHTML = item.bairro
+            const itemCEP = document.createElement('td')
+            itemCEP.innerHTML = item.cep
+            listagemCEP.appendChild(linhaItem)
+            linhaItem.appendChild(itemBairro)
+            linhaItem.appendChild(itemCEP)
+          })
+        })
+        
+      tabelaCEP.style.display = 'block'
+      btnPesquisar.style.display = 'none'
+      btnAtualizar.style.display = 'block'
     })
   })
-  })
-
 

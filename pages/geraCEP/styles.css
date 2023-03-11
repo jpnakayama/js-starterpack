@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 1rem;
 
-  margin: 1rem auto;
+  margin: 1rem auto 0;
 }
 
 .infos select {
@@ -22,3 +22,60 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.infos button {
+  font-size: 1rem;
+  cursor: pointer;
+
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.infos button:hover {
+  background-color: yellow;
+  color: #000;
+  transition: all 0.2s
+}
+
+.btn-refresh {
+  display: none;
+}
+
+.lista-cep {
+  background-color: #1D232A;
+  width: fit-content;
+  margin: 1rem auto 0;
+  border-radius: 10px;
+
+  display: none
+}
+
+.lista-cep th {
+  color: yellow;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #15191C;
+  font-weight: 700;  
+  
+  width: fit-content
+}
+
+.lista-cep td {
+  color: gray;
+  padding: 1rem 2rem;
+  width: fit-content
+}
+
+.lista-cep th:first-child{
+  border-right: 3px solid #15191C;
+  width: auto;
+}
+
+.lista-cep td:first-child{
+  text-align: left;
+  border-right: 3px solid #15191C;
+}
+
