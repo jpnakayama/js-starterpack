@@ -39,7 +39,7 @@
     <button class="cabecalho__home" aria-label="home"><i class="fa-solid fa-house"></i></button>
   </header>
 
-  <nav class="menu-lateral menu-lateral--ativo">
+  <nav class="menu-lateral">
     <h2 class="menu-lateral__title">Javascript Starter Pack</h2>
     <a href="../../index.html" class="menu-lateral__link"><i class="ph-light ph-house"></i>Home</a>
     <a href="../calculadoraIMC/calculadora.html" class="menu-lateral__link"><i class="ph-light ph-calculator"></i>Calculadora IMC</a>
@@ -51,16 +51,16 @@
 
   <main>
     <section class="container">
-      <h1 class="page-title">LISTA IMDb</h1>
-
-      <h2 id="pokemon-id"></h2>
-      <h2 id="pokemon-name"></h2>
-      <img src="" alt="" id="pokemon-img">
+      <h1 class="page-title">POKEDEX</h1>
+      <div id="pokeList">
+      </div>  
+      <div>
+        <button id="loadMoreBtn" type="button">More</button>
+      </div>
     </section>
- 
-
   </main>
-
+  <script src="../../models/pokeModels.js"></script>
+  <script src="../../api/pokeApi.js"></script>
   <script src="../../scripts/menu.js"></script>
   <script src="../../scripts/lista.js"></script>
 

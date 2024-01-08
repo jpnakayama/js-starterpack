@@ -17,36 +17,21 @@
   gap: 2rem
 }
 
-.infos-moedas select {
-  background-color: #1D232A;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-  padding: 0.5rem 1rem;
-}
-
 .infos input {
-  background-color: #1D232A;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-  padding: 0.5rem 1rem;
-
   width: 30%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .infos button {
-  font-size: 1.5rem;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: 2px solid yellow;
-  
-  width: fit-content;
   margin: 0 auto;
+  background-color: yellow;
+  color: #000;
+  padding: 0.5rem 1rem;
+  width: 30%;
+
+  font-weight: 700;
+
+  cursor: pointer;
 }
 
 .infos button:hover {
